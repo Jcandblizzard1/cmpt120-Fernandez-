@@ -9,4 +9,3 @@ def main():
     print ("Answer:",x)
     
 main()
-
