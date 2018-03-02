@@ -2,8 +2,11 @@
 # Lab #5 – Working with Strings and Functions
 # Author: Your Name Here
      # Created: YYYY-MM-DD
+
+# JA: I only see one commit of the file. You had to commiot after each step.
+
 def main():
-    
+    # JA: You had to separate it in functions
     # get user's first and last names
     first = input("Enter your first name: ").lower()
     last = input("Enter your last name: ").lower()
