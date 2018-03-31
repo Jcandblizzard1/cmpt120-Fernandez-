@@ -61,8 +61,8 @@ def arccsne(x):
 ##def closeparen:
 ##   return )
 
-def const(x):
-   return math.e(x)
+def ln(x):
+   return math.log(x)
 
 def memplus(string, mem):
    string, mem = (float(string),float(mem))
@@ -156,9 +156,9 @@ def determine(string):
 ##         string = string.split('(')(')')
 ##         string = parentheses(float(string[0]), float(string[1]))
 ##         return string
-      elif 'cont' in string:
-         string = string.split('const')
-         string = const(float(string[0]))
+      elif 'ln' in string:
+         string = string.split('ln')
+         string = ln(float(string[0]))
          return string
       return string
             

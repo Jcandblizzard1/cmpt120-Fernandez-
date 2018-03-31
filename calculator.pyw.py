@@ -3,7 +3,7 @@
 from graphics import *
 from calc_functions import *
 win = GraphWin('Calculator', 500, 500)
-win.setCoords(0, 0, 9, 6)
+win.setCoords(0, 0, 8, 6)
 
 # Create buttons
 buttons = dict()
