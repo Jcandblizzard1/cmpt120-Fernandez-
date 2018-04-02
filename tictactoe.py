@@ -68,6 +68,7 @@ def main():
         row,col = getPlayerMove()
         if markBoard(board,row,col,player):
             player = player % 2 + 1 # switch player for next turn
+    printBoard(board)
 main()
 
         

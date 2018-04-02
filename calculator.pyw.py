@@ -5,7 +5,13 @@ from calc_functions import *
 win = GraphWin('Calculator', 500, 500)
 win.setCoords(0, 0, 8, 6)
 
+# JA: Basic operations are giving None as result
+
 # Create buttons
+# JA: You could improve this by using a loop that initializes
+# buttons from a list.
+# The functions that take a single argument, you could execute right
+# away without waiting for the "="
 buttons = dict()
 buttons['M+'] = Rectangle(Point(0, 0), Point(1, 1))
 buttons['0'] = Rectangle(Point(1, 0), Point(3, 1))
