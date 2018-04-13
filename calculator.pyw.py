@@ -63,16 +63,13 @@ for symbol, btn in buttons.items():
     text.setSize(15)
     win.addItem(text)
 
-<<<<<<< HEAD
 display = Text(Point(4.0, 5.8),'')
 display2 = Text(Point(4.0, 5.5), '')
 display2.setSize(34)
-win.addItem(display2)
-=======
-display = Text(Point(4.0, 5.5), '')
-display2 = Text(Point(4.0, 5.8), '')
-display.setSize(34)
->>>>>>> 229b4e9df649dc6cfeec60a4f6a438110301eaed
+##win.addItem(display2)
+##display = Text(Point(4.0, 5.5), '')
+##display2 = Text(Point(4.0, 5.8), '')
+display.setSize(15)
 win.addItem(display)
 win.addItem(display2)
 
@@ -90,6 +87,7 @@ def clicked(click):
     return ''
 
 from calc_functions import *
+##dirty = False
 mem = '0'
 answer = ''
 while win.isOpen():
@@ -99,8 +97,6 @@ while win.isOpen():
         display2.setText('')
         display.setText('')
 
-        display2.setText(' ')
-        dirty = False
     elif symbol == 'M+' or symbol == 'M-' or symbol == 'MR' or symbol == 'MC'\
     or symbol == 'MS':
         if symbol == 'M+':
@@ -113,6 +109,7 @@ while win.isOpen():
             mem = '0'
         elif symbol == 'MS':
             mem = display.getText()
+
     elif symbol == '=':
         display2.setText(str(determine(display.getText())))
                
@@ -123,19 +120,4 @@ while win.isOpen():
         try:
             result = str(determine(display.getText()))
             display2.setText(result)
-        except ValueError:
-            pass
-
-    if symbol == '=':
-        display.setText('')
-        if dirty: continue
-        display.setText(str(determine(display2.getText())))
-        dirty = True
-        
-    else:
-            
-        if dirty: continue
-        display2.setText(display2.getText() + symbol)
-
-
-
+        except ValueError: pass
