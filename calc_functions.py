@@ -72,23 +72,10 @@ def determine(string):
    try:
       print(string)
       string = eval(str(string))
-##      print(string)
+
       return str(string)
    except:
       print('except')
-##   if "(" in string:
-##      i = string.index('(')
-##      num = string[i-1:i]
-##      num = float(num)
-##      string = determine(string[:i-1]+"("+str(num)+")")
-##      return string
-##   elif ")" in string:
-##      i = string.index(')')
-##      num = string[i-1:i]
-##      num = sin(float(num))
-##      string = determine(string[:i-1]+"("+str(num)+")")
-##      return string
-      
    
    if 'sin' in string:
       i = string.index('sin')
@@ -191,8 +178,6 @@ def determine(string):
       string = string.split('/')
       string = divide(float(string[0]), float(string[1]))
       return string                     
-
-
    elif 'x^y' in string:
       string = string.split('x^y') 
       string = power(float(string[0]), float(string[1]))
@@ -204,6 +189,3 @@ def determine(string):
                  
 
 
-
-   
-         
