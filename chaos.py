@@ -9,3 +9,5 @@ def main():
         y = 3.9 * x - (3.9 * y) * y
         print(x)
         print(y)
+
+main()
