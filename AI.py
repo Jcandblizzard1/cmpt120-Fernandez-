@@ -14,6 +14,7 @@ def main():
     # Params: none
     # Returns: an integer indicating one of reward, punish, joke, or threaten
     def getInteraction():
+        # JA: You could also do this with a list
         cmd = input('I am ' + ai[aiEmotion] + ': ')
         if cmd == "reward":
             return 0

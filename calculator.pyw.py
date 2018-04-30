@@ -5,6 +5,8 @@ from calc_functions import *
 win = GraphWin('Calculator', 500, 500)
 win.setCoords(0, 0, 8, 6)
 
+# JA: Example 3 of the project description does not work properly
+
 # Create buttons
 buttons = dict()
 buttons['M+'] = Rectangle(Point(0, 0), Point(1, 1))

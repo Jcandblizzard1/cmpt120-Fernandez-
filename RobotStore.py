@@ -22,7 +22,6 @@ class Product:
         self.productquantity = self.productquantity - count
         return self.productquantity
         
-
 Finder = Product(products[0][0],products[0][1],products[0][2])
 Motor = Product(products[1][0],products[1][1],products[1][2])
 Controller = Product(products[2][0],products[2][1],products[2][2])
