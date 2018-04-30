@@ -1,13 +1,15 @@
 #Basic Calculator
-
+#John Fernandez
 from graphics import *
 from calc_functions import *
+from button import Button
 win = GraphWin('Calculator', 500, 500)
 win.setCoords(0, 0, 8, 6)
 
 # JA: Example 3 of the project description does not work properly
 
 # Create buttons
+
 buttons = dict()
 buttons['M+'] = Rectangle(Point(0, 0), Point(1, 1))
 buttons['0'] = Rectangle(Point(1, 0), Point(3, 1))
@@ -55,7 +57,6 @@ buttons['arcsne'] = Rectangle(Point(6, 4), Point(7, 5))
 buttons['('] = Rectangle(Point(7, 4), Point(8, 5))
 
 
-
 # Add buttons to window with text
 for symbol, btn in buttons.items():
     btn.setOutline('orange')
@@ -68,9 +69,6 @@ for symbol, btn in buttons.items():
 display = Text(Point(4.0, 5.8),'')
 display2 = Text(Point(4.0, 5.5), '')
 display2.setSize(34)
-##win.addItem(display2)
-##display = Text(Point(4.0, 5.5), '')
-##display2 = Text(Point(4.0, 5.8), '')
 display.setSize(15)
 win.addItem(display)
 win.addItem(display2)
@@ -123,3 +121,5 @@ while win.isOpen():
             result = str(determine(display.getText()))
             display2.setText(result)
         except ValueError: pass
+
+
